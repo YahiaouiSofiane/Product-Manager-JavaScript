@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager JavaScript | By Sofiane Yahiaoui</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="product__manager">
+            <h1 class="header">Product Manager</h1>
+            <div class="inputs">
+                <div class="input__row">
+                    <input class="productCreationInput" onkeyup="getValue()" type="text" id="title" placeholder="Title">
+                    <input class="productCreationInput" onkeyup="getValue()" type="text" id="category" placeholder="Category">
+                </div>
+                <div class="input__row">
+                    <input class="productCreationInput" onkeyup="getValue()" type="text" id="currency" placeholder="Currency e.g. : USD" maxlength="4">
+                    <input class="productCreationInput" onkeyup="getValue()" type="number" id="price" placeholder="Price">
+                    <input class="productCreationInput" onkeyup="getValue()" type="number" id="tax" placeholder="Taxes">
+                </div>
+                <div class="input__row">
+                    <input class="productCreationInput" onkeyup="getValue()" type="number" id="discount" placeholder="Discount">
+                    <input class="productCreationInput" onkeyup="getValue()" type="number" id="count" placeholder="Count">
+                    <input class="productCreationInput" onkeyup="getValue()" type="text" id="productId" placeholder="ID">
+                </div>
+                <div class="input__row">
+                    <input class="productCreationInput" onkeyup="getValue()" type="text" id="description" placeholder="Description">
+                </div>
+                <div class="create__button__container">
+                    <button class="create buttons" id="create">Create</button>
+                    <button class="update buttons" id="update">Update</button>
+                </div>
+                <div class="input__row">
+                    <input type="text" id="search" placeholder="Search" onkeyup="cancelSearch()">
+            </div>
+            <div class="input__row search__checklist">
+                <h2 class="search__by">Search By :</h2>
+                <label for="radioForTitle">Title</label>
+                <input type="radio" id="radioForTitle" value="title" name="checklist" checked="checked">  
+                <label for="radioForCategory">Category</label>
+                <input type="radio" id="radioForCategory" value="category" name="checklist">
+                <label for="radioForId">ID</label>
+                <input type="radio" id="radioForId" value="id" name="checklist">
+                <button class="search__button" onclick="searchForProduct()">Search</button>
+            </div>
+            <div class="products__container">
+                <div class="products__container__header">
+                    <h2 >Products</h2>
+                    <button class="delete__all buttons" id="deleteAll">Delete All Products</button>
+                </div>
+                <div class="no__products">
+                    <p>You Have No Products</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
